@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14B23" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JmX-M3-MGh">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSE-ov-vXZ">
+                                <rect key="frame" x="106" y="484" width="109" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="VYi-Qi-2PY"/>
+                                </constraints>
+                                <state key="normal" title="Get info">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getInfoClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="X9s-re-6xz"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xuc-sS-2gS">
+                                <rect key="frame" x="16" y="72" width="288" height="394"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xuc-sS-2gS" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="5u4-tC-kmf"/>
+                            <constraint firstAttribute="centerX" secondItem="nSE-ov-vXZ" secondAttribute="centerX" id="7Iw-5o-oBR"/>
+                            <constraint firstAttribute="trailing" secondItem="xuc-sS-2gS" secondAttribute="trailing" constant="16" id="BpL-yF-hfi"/>
+                            <constraint firstItem="nSE-ov-vXZ" firstAttribute="top" secondItem="xuc-sS-2gS" secondAttribute="bottom" constant="18" id="GCT-Sh-plR"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="nSE-ov-vXZ" secondAttribute="bottom" constant="54" id="HQ1-vy-u58"/>
+                            <constraint firstItem="xuc-sS-2gS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="dq5-r1-e03"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="g1Y-xO-vrG"/>
+                    <connections>
+                        <outlet property="textView" destination="xuc-sS-2gS" id="eW5-CP-PsI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1147" y="273"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Kiq-gi-Xgk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JmX-M3-MGh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vla-Ss-9bA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="ZqR-La-roz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Unm-0Y-0m1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="659" y="274"/>
+        </scene>
+    </scenes>
+</document>
